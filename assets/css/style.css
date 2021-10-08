@@ -12,11 +12,31 @@ h1 {
     text-align: center;
 }
 
-/* Welcome Box style */
+/*Message area style */
 
-#welcome-box {
-    border: 4px groove #4A556B;
-    text-align: center;
+.message-area {
     font-size: 200%;
-    padding: 8px;
+    text-align: center;
+    margin: 15%;
+}
+
+#username {
+    clear: both;
+    background: transparent;
+    color: black;
+    width: 40%;
+    height: 30px;
+    margin: 20px;
+    border: 1px solid #4A556B;
+    border-radius: 2px;
+}
+
+#submit-button {
+    display: block;
+    margin: auto;
+    height: 45px;
+    width: 80px;
+    font-family: 'Glory', sans-serif;
+    font-size: 100%;
+    border-radius: 4px;
 }
