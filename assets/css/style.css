@@ -14,7 +14,7 @@ h1 {
 
 /*Message area style */
 
-.message-area {
+.welcome-area {
     font-size: 200%;
     text-align: center;
     margin: 15%;
@@ -31,12 +31,17 @@ h1 {
     border-radius: 2px;
 }
 
-#submit-button {
+.button {
     display: block;
     margin: auto;
-    height: 45px;
-    width: 80px;
-    font-family: 'Glory', sans-serif;
-    font-size: 100%;
+    width: 140px;
+    height: 60px;
+    font-size: 120%;
     border-radius: 4px;
+    border-color: #4A556B;
+}
+
+.button:hover {
+    background-color: #4A556B;
+    color: white;
 }
