@@ -1,0 +1,22 @@
+/* Global Style */
+
+body {
+    background-color: #E8E9EB;
+    font-family: 'Glory', sans-serif;
+}
+
+h1 {
+    color: black;
+    font-family: 'Glory', sans-serif;
+    font-size: 300%;
+    text-align: center;
+}
+
+/* Welcome Box style */
+
+#welcome-box {
+    border: 4px groove #4A556B;
+    text-align: center;
+    font-size: 200%;
+    padding: 8px;
+}
