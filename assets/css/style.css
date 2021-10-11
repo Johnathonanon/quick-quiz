@@ -14,7 +14,7 @@ h1 {
 
 /*Message area style */
 
-.welcome-area {
+#welcome-area {
     font-size: 200%;
     text-align: center;
     margin: 15%;
@@ -29,6 +29,8 @@ h1 {
     margin: 20px;
     border: 1px solid #4A556B;
     border-radius: 2px;
+    font-family: 'Glory', sans-serif;
+    font-size: 80%;
 }
 
 .button {
