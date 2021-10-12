@@ -92,23 +92,26 @@ const questions = [{
     }
 ];
 
-// Generates questions and answers
-
-function runQuiz () {
-    console.log("ok");
-}
-
-// Creates and validates username
+// Creates and validates username, displays quiz areas on user input
 
 document.getElementById("confirm").addEventListener("click", function () {
     let username = document.getElementById("username").value;
+    if (username === "") {
+        alert("Please enter a valid username");
+    } else {
     document.getElementById("message").textContent =`Welcome ${username}! Lets Begin!`;
     document.getElementById("username").remove();
     document.getElementById("confirm").remove();
     setTimeout(function () {
-            document.getElementById("message").style.display = "none";
+            document.getElementById("welcome-area").style.display = "none";
+            document.getElementById("question-area").style.display ="block";
+            document.getElementById("answer-area").style.display ="block";
+            document.getElementById("next").style.display ="block";
         }, 2000);
-    if (username === "") {
-        alert("Please enter a valid username");
-    }
-});
+}});
+
+// Generates questions and answers
+
+document.getElementById("question-area").addEventListener("load", function () {
+    console.log("ok")
+})
