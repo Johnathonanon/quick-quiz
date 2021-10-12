@@ -1,6 +1,6 @@
 // Questions array
 
-let questions = [{
+const questions = [{
         "difficulty": "easy",
         "question": "How many days in a fortnight?",
         "correctAnswer": "14",
@@ -92,20 +92,23 @@ let questions = [{
     }
 ];
 
-// Creates username and advances to difficulty choice on confirmation
+// Generates questions and answers
 
-document.getElementById("enter").addEventListener("click", function () {
+function runQuiz () {
+    console.log("ok");
+}
+
+// Creates and validates username
+
+document.getElementById("confirm").addEventListener("click", function () {
     let username = document.getElementById("username").value;
-    document.getElementById("welcome-area").innerHTML =`
-    <p>Hi ${username}! Please choose a difficulty</p>
-    <button id="easy" class="button">Easy</button>
-    <button id="medium" class="button">Medium</button>
-    <button id="hard" class="button">Hard</button>
-    `;
+    document.getElementById("message").textContent =`Welcome ${username}! Lets Begin!`;
+    document.getElementById("username").remove();
+    document.getElementById("confirm").remove();
+    setTimeout(function () {
+            document.getElementById("message").style.display = "none";
+        }, 2000);
     if (username === "") {
         alert("Please enter a valid username");
     }
 });
-
-// Generates questions based on difficulty choice
-

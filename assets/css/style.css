@@ -14,7 +14,7 @@ h1 {
 
 /*Message area style */
 
-#welcome-area {
+.welcome-area {
     font-size: 200%;
     text-align: center;
     margin: 15%;
