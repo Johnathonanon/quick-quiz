@@ -57,10 +57,17 @@ h1 {
     display: none;
     clear: both;
     width: 90%;
-    border: 1px solid #4A556B;
+    border-top: 4px groove #4A556B;
+    border-bottom: 4px groove #4A556B;
     border-radius: 2px;
-    margin: auto;
+    margin: 60px auto;
     height: 50%;
+}
+
+#question {
+    text-align: center;
+    font-family: 'Glory', sans-serif;
+    font-size: 200%;
 }
 
 /* Answer area style */
@@ -68,13 +75,28 @@ h1 {
 #answer-area {
     display: none;
     clear: both;
-    width: 90%;
+    width: 100%;
     border: 1px solid #4A556B;
-    border-radius: 2px;
-    margin: auto;
+    border-radius: 4px;
+    margin: 40px auto;
     height: 50%;
+    font-size: 150%;
+}
+
+#answer-area div {
+    display: block;
+    width: 90%;
+    border: 1px solid black;
+    margin: 40px auto;
+}
+
+#answer-area input {
+    height: 25px;
+    width: 25px;
+    margin: 10px;
 }
 
 #next {
     display: none;
+    font-size: 150%;
 }

@@ -1,6 +1,6 @@
 // Questions array
 
-const questions = [{
+const questionArray = [{
         "difficulty": "easy",
         "question": "How many days in a fortnight?",
         "correctAnswer": "14",
@@ -99,19 +99,29 @@ document.getElementById("confirm").addEventListener("click", function () {
     if (username === "") {
         alert("Please enter a valid username");
     } else {
-    document.getElementById("message").textContent =`Welcome ${username}! Lets Begin!`;
-    document.getElementById("username").remove();
-    document.getElementById("confirm").remove();
-    setTimeout(function () {
-            document.getElementById("welcome-area").style.display = "none";
-            document.getElementById("question-area").style.display ="block";
-            document.getElementById("answer-area").style.display ="block";
-            document.getElementById("next").style.display ="block";
+        document.getElementById("message").textContent = `Welcome ${username}! Lets Begin!`;
+        document.getElementById("username").remove();
+        document.getElementById("confirm").remove();
+        setTimeout(function () {
+            document.getElementById("message").style.fontSize = "80%";
+            document.getElementById("message").textContent = `Please read the question carefully and select the correct answer from the choices below`;
+            document.getElementById("welcome-area").style.margin = "auto";
+            document.getElementById("question-area").style.display = "block";
+            document.getElementById("answer-area").style.display = "block";
+            document.getElementById("next").style.display = "block";
         }, 2000);
-}});
+    }
+});
 
 // Generates questions and answers
 
-document.getElementById("question-area").addEventListener("load", function () {
-    console.log("ok")
-})
+function runQuiz () {
+    let randomQuestion = questionArray[Math.floor(Math.random() * questionArray.length)];
+    let userQuestion = randomQuestion.question;
+    let answer = randomQuestion.correctAnswer;
+    let wrongArray = randomQuestion.wrongAnswers;
+    document.getElementById("question").textContent = userQuestion;
+    console.log(userQuestion, answer, wrongArray);
+}
+
+runQuiz();
