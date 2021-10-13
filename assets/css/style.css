@@ -88,15 +88,16 @@ h1 {
     width: 90%;
     border: 1px solid black;
     margin: 40px auto;
+    text-align: center;
+}
+
+.answers:hover {
+    background-color: #ABC4F7;
 }
 
 #answer-area input {
     height: 25px;
     width: 25px;
-    margin: 10px;
+    margin: 0;
 }
 
-#next {
-    display: none;
-    font-size: 150%;
-}

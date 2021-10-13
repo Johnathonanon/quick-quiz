@@ -1,96 +1,97 @@
 // Questions array
 
-const questionArray = [{
-        "difficulty": "easy",
-        "question": "How many days in a fortnight?",
-        "correctAnswer": "14",
-        "wrongAnswers": ["7", "21", "365"]
+const questionArray = [
+    {
+        "question" : "How many days in a fortnight?",
+        "choices" : ["14", "7", "21", "365"],
+        "correct" : "14",
     },
     {
-        "difficulty": "easy",
         "question": "What is the capital city of Ireland?",
-        "correctAnswer": "Dublin",
-        "wrongAnswers": ["London", "Madrid", "Sydney"]
+        "choices": ["London", "Madrid","Dublin", "Sydney"],
+        "correct" : "Dublin",
     },
     {
-        "difficulty": "easy",
         "question": "Which of these is a prime number?",
-        "correctAnswer": "3",
-        "wrongAnswers": ["8", "20", "45"]
+        "choices": ["8", "20", "45", "3"],
+        "correct": "3",
     },
     {
-        "difficulty": "easy",
         "question": "Red, Yellow, and ____ are the 3 primary colours?",
-        "correctAnswer": "Blue",
-        "wrongAnswers": ["Purple", "Green", "Orange"]
+        "choices": ["Blue", "Purple", "Green", "Orange"],
+        "correct": "Blue",
     },
     {
-        "difficulty": "easy",
         "question": "In which country would you find the Eiffel Tower?",
-        "correctAnswer": "France",
-        "wrongAnswers": ["Ireland", "Sweden", "China"]
+        "choices": ["Ireland", "France", "Sweden", "China"],
+        "correct": "France",
     },
     {
-        "difficulty": "medium",
         "question": "What does the Spanish word 'espada' mean?",
-        "correctAnswer": "Sword",
-        "wrongAnswers": ["Snail", "Car", "House"]
+        "choices": ["Snail", "Car", "House", "Sword"],
+        "correct": "Sword",
     },
     {
-        "difficulty": "medium",
         "question": "The word 'arachnid' most commonly refers to which household insect?",
-        "correctAnswer": "Spider",
-        "wrongAnswers": ["Fly", "Ant", "Moth"]
+        "choices": ["Fly", "Ant", "Moth", "Spider"],
+        "correct": "Spider",
     },
     {
-        "difficulty": "medium",
         "question": "Who was the 16th president of the United States?",
-        "correctAnswer": "Abraham Lincoln",
-        "wrongAnswers": ["Andrew Johnson", "Grover Cleveland", "Franklin D. Roosevelt"]
+        "choices": ["Andrew Johnson", "Grover Cleveland", "Abraham Lincoln", "Franklin D. Roosevelt"],
+        "correct": "Abraham Lincoln",
     },
     {
-        "difficulty": "medium",
         "question": "In biology what is generally known as the 'powerhouse of the cell'?",
-        "correctAnswer": "Mitochondria",
-        "wrongAnswers": ["Cytoplasm", "Ribosomes", "Nucleus"]
+        "choices": ["Cytoplasm", "Mitochondria", "Ribosomes", "Nucleus"],
+        "correct": "Mitochondria",
     },
     {
-        "difficulty": "medium",
         "question": "What is the modern name of the state of Rhodesia?",
-        "correctAnswer": "Zimbabwe",
-        "wrongAnswers": ["Tanzania", "Zambia", "Botswana"]
+        "choices": ["Zimbabwe", "Tanzania", "Zambia", "Botswana"],
+        "correct": "Zimbabwe",
     },
     {
-        "difficulty": "hard",
         "question": "What year did Vincent Van Gogh die?",
-        "correctAnswer": "1890",
-        "wrongAnswers": ["1888", "1798", "1844"]
+        "choices": ["1888", "1798", "1844", "1890"],
+        "correct": "1890",
     },
     {
-        "difficulty": "hard",
         "question": "Which English city was once known as Duroliponte?",
-        "correctAnswer": "Cambridge",
-        "wrongAnswers": ["London", "Oxford", "Nottingham"]
+        "choices": ["London", "Oxford", "Cambridge", "Nottingham"],
+        "correct": "Cambridge",
     },
     {
-        "difficulty": "hard",
         "question": "How many faces does a dodecahedron have?",
-        "correctAnswer": "12",
-        "wrongAnswers": ["10", "100", "16"]
+        "choices": ["10", "100", "16", "12"],
+        "correct": "12",
     },
     {
-        "difficulty": "hard",
         "question": "How many people have so far walked on the moon?",
-        "correctAnswer": "12",
-        "wrongAnswers": ["2", "8", "20"]
+        "choices": ["12", "2", "8", "20"],
+        "correct": "12",
     },
     {
-        "difficulty": "hard",
         "question": "Who is said to have 'fiddled while Rome burned'?",
-        "correctAnswer": "Nero",
-        "wrongAnswers": ["Brutus", "Augustus", "Hannibal"]
+        "choices": ["Brutus", "Augustus", "Nero", "Hannibal"],
+        "correct": "Nero",
     }
 ];
+
+// Generates questions and answers
+
+window.addEventListener("DOMContentLoaded", function runQuiz () {
+    let randomQuestion = questionArray[Math.floor(Math.random() * questionArray.length)];
+    let userQuestion = randomQuestion.question;
+    let answer = randomQuestion.correct;
+    let userChoices = randomQuestion.choices;
+    document.getElementById("question").textContent = userQuestion;
+    document.getElementById("a1").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+    document.getElementById("a2").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+    document.getElementById("a3").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+    document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+    console.log(userQuestion, answer, userChoices);
+});
 
 // Creates and validates username, displays quiz areas on user input
 
@@ -108,20 +109,7 @@ document.getElementById("confirm").addEventListener("click", function () {
             document.getElementById("welcome-area").style.margin = "auto";
             document.getElementById("question-area").style.display = "block";
             document.getElementById("answer-area").style.display = "block";
-            document.getElementById("next").style.display = "block";
         }, 2000);
     }
 });
 
-// Generates questions and answers
-
-function runQuiz () {
-    let randomQuestion = questionArray[Math.floor(Math.random() * questionArray.length)];
-    let userQuestion = randomQuestion.question;
-    let answer = randomQuestion.correctAnswer;
-    let wrongArray = randomQuestion.wrongAnswers;
-    document.getElementById("question").textContent = userQuestion;
-    console.log(userQuestion, answer, wrongArray);
-}
-
-runQuiz();
