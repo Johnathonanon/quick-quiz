@@ -79,28 +79,34 @@ const questionArray = [{
 
 let usedQuestions = [];
 
-// Generates questions and answers
+// Generates questions and answers and displays to page
 
 function runQuiz() {
+
     let randomQuestion = questionArray.splice(Math.floor(Math.random() * questionArray.length), 1)[0];
     let userQuestion = randomQuestion.question;
     let answer = randomQuestion.correct;
     let userChoices = randomQuestion.choices;
+
     usedQuestions.push(randomQuestion);
+
     document.getElementById("question").textContent = userQuestion;
     document.getElementById("a1").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
     document.getElementById("a2").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
     document.getElementById("a3").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
     document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
-    console.log(userQuestion, answer, userChoices);
 };
+
+// Allows runQuiz function to run on page load
 
 window.addEventListener("DOMContentLoaded", runQuiz);
 
 // Creates and validates username, displays quiz areas on user input
 
 document.getElementById("confirm").addEventListener("click", function () {
+
     let username = document.getElementById("username").value;
+
     if (username === "") {
         alert("Please enter a valid username");
     } else {
@@ -116,6 +122,8 @@ document.getElementById("confirm").addEventListener("click", function () {
         }, 2000);
     }
 });
+
+// Event listeners for user answer input
 
 document.getElementById("a1").addEventListener("click", runQuiz);
 document.getElementById("a2").addEventListener("click", runQuiz);
