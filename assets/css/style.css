@@ -43,6 +43,7 @@ h1 {
     font-size: 100%;
     border-radius: 4px;
     border-color: #4A556B;
+    font-family: 'Glory', sans-serif;
 }
 
 .button:hover {
@@ -75,9 +76,7 @@ h1 {
 #answer-area {
     display: none;
     clear: both;
-    width: 100%;
-    border: 1px solid #4A556B;
-    border-radius: 4px;
+    width: 98%;
     margin: 40px auto;
     height: 50%;
     font-size: 150%;
@@ -85,6 +84,7 @@ h1 {
 
 #answer-area div {
     display: block;
+    height: 15%;
     width: 90%;
     margin: 40px auto;
     text-align: center;
@@ -92,9 +92,11 @@ h1 {
 
 .answer-button {
     height: 100%;
-    width:90%;
-    padding: 5%;
+    width:100%;
+    padding: 2%;
     font-size: 120%;
+    font-family: 'Glory', sans-serif;
+    border: 4px outset #ABC4F7;
 }
 
 .answer-button:hover {
