@@ -1,15 +1,14 @@
 // Questions array
 
-const questionArray = [
-    {
-        "question" : "How many days in a fortnight?",
-        "choices" : ["14", "7", "21", "365"],
-        "correct" : "14",
+const questionArray = [{
+        "question": "How many days in a fortnight?",
+        "choices": ["14", "7", "21", "365"],
+        "correct": "14",
     },
     {
         "question": "What is the capital city of Ireland?",
-        "choices": ["London", "Madrid","Dublin", "Sydney"],
-        "correct" : "Dublin",
+        "choices": ["London", "Madrid", "Dublin", "Sydney"],
+        "correct": "Dublin",
     },
     {
         "question": "Which of these is a prime number?",
@@ -78,20 +77,25 @@ const questionArray = [
     }
 ];
 
+let usedQuestions = [];
+
 // Generates questions and answers
 
-window.addEventListener("DOMContentLoaded", function runQuiz () {
-    let randomQuestion = questionArray[Math.floor(Math.random() * questionArray.length)];
+function runQuiz() {
+    let randomQuestion = questionArray.splice(Math.floor(Math.random() * questionArray.length), 1)[0];
     let userQuestion = randomQuestion.question;
     let answer = randomQuestion.correct;
     let userChoices = randomQuestion.choices;
+    usedQuestions.push(randomQuestion);
     document.getElementById("question").textContent = userQuestion;
     document.getElementById("a1").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
     document.getElementById("a2").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
     document.getElementById("a3").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
     document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
     console.log(userQuestion, answer, userChoices);
-});
+};
+
+window.addEventListener("DOMContentLoaded", runQuiz);
 
 // Creates and validates username, displays quiz areas on user input
 
@@ -113,3 +117,7 @@ document.getElementById("confirm").addEventListener("click", function () {
     }
 });
 
+document.getElementById("a1").addEventListener("click", runQuiz);
+document.getElementById("a2").addEventListener("click", runQuiz);
+document.getElementById("a3").addEventListener("click", runQuiz);
+document.getElementById("a4").addEventListener("click", runQuiz);
