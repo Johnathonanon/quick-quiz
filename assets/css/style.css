@@ -86,13 +86,17 @@ h1 {
 #answer-area div {
     display: block;
     width: 90%;
-    border: 1px solid black;
     margin: 40px auto;
     text-align: center;
 }
 
-.answers:hover {
-    background-color: #ABC4F7;
+.answer-button {
+    height: 100%;
+    width:90%;
+    padding: 5%;
+    font-size: 120%;
 }
 
-
+.answer-button:hover {
+    background-color: #ABC4F7;
+}
