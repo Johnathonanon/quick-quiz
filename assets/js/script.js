@@ -106,7 +106,7 @@ const questionArray = [{
 
 let usedQuestions = [];
 
-// Score variable
+// User score variable
 
 let score = 0;
 
@@ -119,24 +119,44 @@ function runQuiz() {
     let answer = randomQuestion.correct;
     let userChoices = randomQuestion.choices;
 
-    usedQuestions.push(randomQuestion);
+    if (questionArray.length === 0) {
+        document.getElementById("answer-area").addEventListener("click", function () {
+            finishQuiz();
+        })
+    } else {
+        document.getElementById("question").textContent = userQuestion;
+        document.getElementById("a1").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+        document.getElementById("a2").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+        document.getElementById("a3").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+        document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
 
-    document.getElementById("question").textContent = userQuestion;
-    document.getElementById("a1").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
-    document.getElementById("a2").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
-    document.getElementById("a3").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
-    document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
-    checkAnswer();
+        usedQuestions.push(randomQuestion);
+        checkAnswer();
+    }
 };
 
-// Function checks answer and user progress
-function checkAnswer() {
-    console.log("Correct");
+// function to run at completion of quiz. Shows user score
+function finishQuiz() {
+
+    let username = document.getElementById("username").value;
+
+    document.getElementById("message").style.fontSize = "100%";
+    document.getElementById("message").textContent = `Well done on completeing the quiz ${username}. You scored: ${score}/20.`;
+    document.getElementById("welcome-area").style.margin = "25% auto";
+    document.getElementById("question-area").style.display = "none";
+    document.getElementById("answer-area").style.display = "none";
 }
 
-// Allows runQuiz function to run on page load
+// Function checks answer and user progress
 
-window.addEventListener("DOMContentLoaded", runQuiz);
+function checkAnswer() {
+    let userAnswer = document.getElementById("answer-area").onclick;
+};
+
+// function increments score starting at 0
+function incrementScore() {
+    score++
+};
 
 // Creates and validates username, displays quiz areas on user input
 
@@ -148,9 +168,9 @@ document.getElementById("confirm").addEventListener("click", function () {
         alert("Please enter a valid username");
     } else {
         document.getElementById("message").textContent = `Welcome ${username}! Lets Begin!`;
-        document.getElementById("username").remove();
-        document.getElementById("confirm").remove();
-        document.getElementById("input-label").remove();
+        document.getElementById("username").style.display = "none";
+        document.getElementById("confirm").style.display = "none";
+        document.getElementById("input-label").style.display = "none";
         setTimeout(function () {
             document.getElementById("message").style.fontSize = "80%";
             document.getElementById("message").textContent = `Please read the question carefully and select the correct answer from the choices below`;
@@ -159,6 +179,7 @@ document.getElementById("confirm").addEventListener("click", function () {
             document.getElementById("answer-area").style.display = "block";
         }, 2000);
     }
+    runQuiz();
 });
 
 // Event listeners for user answer input
