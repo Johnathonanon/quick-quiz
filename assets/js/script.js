@@ -110,29 +110,25 @@ let usedQuestions = [];
 
 let score = 0;
 
+let randomQuestion;
+
 // Generates questions and answers and displays to page
 
 function runQuiz() {
 
-    let randomQuestion = questionArray.splice(Math.floor(Math.random() * questionArray.length), 1)[0];
+    randomQuestion = questionArray.splice(Math.floor(Math.random() * questionArray.length), 1)[0];
     let userQuestion = randomQuestion.question;
     let answer = randomQuestion.correct;
     let userChoices = randomQuestion.choices;
 
-    if (questionArray.length === 0) {
-        document.getElementById("answer-area").addEventListener("click", function () {
-            finishQuiz();
-        })
-    } else {
-        document.getElementById("question").textContent = userQuestion;
-        document.getElementById("a1").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
-        document.getElementById("a2").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
-        document.getElementById("a3").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
-        document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+    document.getElementById("question").textContent = userQuestion;
+    document.getElementById("a1").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+    document.getElementById("a2").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+    document.getElementById("a3").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+    document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
 
-        usedQuestions.push(randomQuestion);
-        checkAnswer();
-    }
+    usedQuestions.push(randomQuestion);
+
 };
 
 // function to run at completion of quiz. Shows user score
@@ -140,17 +136,35 @@ function finishQuiz() {
 
     let username = document.getElementById("username").value;
 
-    document.getElementById("message").style.fontSize = "100%";
-    document.getElementById("message").textContent = `Well done on completeing the quiz ${username}. You scored: ${score}/20.`;
-    document.getElementById("welcome-area").style.margin = "25% auto";
-    document.getElementById("question-area").style.display = "none";
-    document.getElementById("answer-area").style.display = "none";
-}
+    setTimeout(function () {
+        document.getElementById("message").style.fontSize = "100%";
+        document.getElementById("welcome-area").innerHTML =
+            `<p id="message">Well done on completing the quiz ${username}!!</p>
+         <br> 
+         <p>You scored: ${score}/20.</p>
+         <br> 
+         <p>Click the button below if you'd like to play again</p>
+         <br>
+         <button class="button" id="refresh" required>Play Again!</button>`;
+        document.getElementById("welcome-area").style.margin = "10% auto";
+        document.getElementById("question-area").style.display = "none";
+        document.getElementById("answer-area").style.display = "none";
+    }, 1000)
+};
 
 // Function checks answer and user progress
 
-function checkAnswer() {
-    let userAnswer = document.getElementById("answer-area").onclick;
+function checkAnswer(ev) {
+    if (ev.target.innerHTML === randomQuestion.correct) {
+        incrementScore();
+    };
+    if (questionArray.length === 0) {
+        document.getElementById("answer-area").addEventListener("click", function () {
+            finishQuiz();
+        })
+    } else {
+        runQuiz()
+    };
 };
 
 // function increments score starting at 0
@@ -182,9 +196,10 @@ document.getElementById("confirm").addEventListener("click", function () {
     runQuiz();
 });
 
-// Event listeners for user answer input
+// Event listeners for user answer input and refresh
 
-document.getElementById("a1").addEventListener("click", runQuiz);
-document.getElementById("a2").addEventListener("click", runQuiz);
-document.getElementById("a3").addEventListener("click", runQuiz);
-document.getElementById("a4").addEventListener("click", runQuiz);
+document.getElementById("a1").addEventListener("click", checkAnswer);
+document.getElementById("a2").addEventListener("click", checkAnswer);
+document.getElementById("a3").addEventListener("click", checkAnswer);
+document.getElementById("a4").addEventListener("click", checkAnswer);
+//document.getElementById("refresh").addEventListener("click", document.location.reload());

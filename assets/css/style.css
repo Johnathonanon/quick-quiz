@@ -52,6 +52,11 @@ h1 {
     outline: black;
 }
 
+#refresh {
+    width: 250px;
+    height: 100px;
+}
+
 /* Question area style */
 
 #question-area {
