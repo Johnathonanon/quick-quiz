@@ -74,10 +74,41 @@ const questionArray = [{
         "question": "Who is said to have 'fiddled while Rome burned'?",
         "choices": ["Brutus", "Augustus", "Nero", "Hannibal"],
         "correct": "Nero",
-    }
+    },
+    {
+        "question": "Who wrote The Old Man and the Sea?",
+        "choices": ["Ernest Hemingway", "Mark Twain", "John Steinbeck", "F. Scott Fitzgerald"],
+        "correct": "Ernest Hemingway",
+    },
+    {
+        "question": "Who is the most successful Olympian of all time?",
+        "choices": ["Mark Spitz", "Usain Bolt", "Michael Phelps", " Larisa Latynina"],
+        "correct": "Michael Phelps",
+    },
+    {
+        "question": "Which Tennis Grand Slam is played on a clay surface?",
+        "choices": ["The Australian Open", "Wimbledon", "The French Open", "The US Open"],
+        "correct": "The French Open",
+    },
+    {
+        "question": "From what grain is the Japanese spirit Sake made?",
+        "choices": ["Rice", "Wheat", "Barley", "Rye"],
+        "correct": "Rice",
+    },
+    {
+        "question": "Who is rumoured to 'live in a pinapple under the sea'?",
+        "choices": ["Roger Rabbit", "Fred Flintstone", "Homer Simpson", "Spongbob Squarepants"],
+        "correct": "Spongebob Squarepants",
+    },
 ];
 
+// Array to store previously generated questions
+
 let usedQuestions = [];
+
+// Score variable
+
+let score = 0;
 
 // Generates questions and answers and displays to page
 
@@ -95,7 +126,13 @@ function runQuiz() {
     document.getElementById("a2").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
     document.getElementById("a3").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
     document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+    checkAnswer();
 };
+
+// Function checks answer and user progress
+function checkAnswer() {
+    console.log("Correct");
+}
 
 // Allows runQuiz function to run on page load
 
@@ -113,6 +150,7 @@ document.getElementById("confirm").addEventListener("click", function () {
         document.getElementById("message").textContent = `Welcome ${username}! Lets Begin!`;
         document.getElementById("username").remove();
         document.getElementById("confirm").remove();
+        document.getElementById("input-label").remove();
         setTimeout(function () {
             document.getElementById("message").style.fontSize = "80%";
             document.getElementById("message").textContent = `Please read the question carefully and select the correct answer from the choices below`;
