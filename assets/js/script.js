@@ -97,7 +97,7 @@ const questionArray = [{
     },
     {
         "question": "Who is rumoured to 'live in a pinapple under the sea'?",
-        "choices": ["Roger Rabbit", "Fred Flintstone", "Homer Simpson", "Spongbob Squarepants"],
+        "choices": ["Roger Rabbit", "Fred Flintstone", "Homer Simpson", "Spongebob Squarepants"],
         "correct": "Spongebob Squarepants",
     },
 ];
@@ -109,6 +109,8 @@ let usedQuestions = [];
 // User score variable
 
 let score = 0;
+
+// Declaration of random question from questionArray
 
 let randomQuestion;
 
@@ -131,21 +133,23 @@ function runQuiz() {
 
 };
 
-// function to run at completion of quiz. Shows user score
+// function to run at completion of quiz. Displays user score
+
 function finishQuiz() {
 
     let username = document.getElementById("username").value;
 
     setTimeout(function () {
         document.getElementById("message").style.fontSize = "100%";
-        document.getElementById("welcome-area").innerHTML =
-            `<p id="message">Well done on completing the quiz ${username}!!</p>
-         <br> 
-         <p>You scored: ${score}/20.</p>
-         <br> 
-         <p>Click the button below if you'd like to play again</p>
-         <br>
-         <button class="button" id="refresh" required>Play Again!</button>`;
+        document.getElementById("welcome-area").innerHTML = `
+            <p id="message">Well done on completing the quiz ${username}!!</p>
+             <br> 
+             <p>You scored: ${score}/20.</p>
+             <br> 
+             <p>Click the button below if you'd like to play again</p>
+             <br>
+             <button class="button" id="refresh" required>Play Again!</button>
+             `;
         document.getElementById("welcome-area").style.margin = "10% auto";
         document.getElementById("question-area").style.display = "none";
         document.getElementById("answer-area").style.display = "none";
@@ -159,15 +163,14 @@ function checkAnswer(ev) {
         incrementScore();
     };
     if (questionArray.length === 0) {
-        document.getElementById("answer-area").addEventListener("click", function () {
-            finishQuiz();
-        })
+        finishQuiz();
     } else {
         runQuiz()
     };
 };
 
 // function increments score starting at 0
+
 function incrementScore() {
     score++
 };
@@ -202,4 +205,7 @@ document.getElementById("a1").addEventListener("click", checkAnswer);
 document.getElementById("a2").addEventListener("click", checkAnswer);
 document.getElementById("a3").addEventListener("click", checkAnswer);
 document.getElementById("a4").addEventListener("click", checkAnswer);
-//document.getElementById("refresh").addEventListener("click", document.location.reload());
+
+document.getElementById("refresh").addEventListener("click", function () {
+    window.location.reload();
+});
