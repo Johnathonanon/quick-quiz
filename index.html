@@ -22,17 +22,20 @@
 
     <h1>Quick Quiz <i class="fas fa-fast-forward"></i></h1>
 
-    <div id="welcome-area">
+    <!--First area displayed allowing username input and progression to main quiz. Also used to display instructions and final score-->
+    <div id="message-area">
         <p id="message">Welcome to Quick Quiz! Please enter a username:</p>
         <label for="username" id="input-label">Username:</label>
         <input type="text" id="username" required>
         <button class="button" id="confirm" required>Confirm</button>
     </div>
 
+    <!--Area of page where randomly generated question is displayed-->
     <div id="question-area">
-        <p id="question"></p>
+        <p id="question">XXXXXXXXXX</p>
     </div>
 
+    <!--Area where answer choices associated with question are randomly assigned to buttons-->
     <div id="answer-area">
         <div class="answers">
             <button id="a1" class="answer-button">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</button>
@@ -48,6 +51,7 @@
         </div>
     </div>
 
+     <!--Scripts-->
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/357f501abd.js" crossorigin="anonymous"></script>
 </body>

@@ -120,7 +120,6 @@ function runQuiz() {
 
     randomQuestion = questionArray.splice(Math.floor(Math.random() * questionArray.length), 1)[0];
     let userQuestion = randomQuestion.question;
-    let answer = randomQuestion.correct;
     let userChoices = randomQuestion.choices;
 
     document.getElementById("question").textContent = userQuestion;
@@ -131,9 +130,9 @@ function runQuiz() {
 
     usedQuestions.push(randomQuestion);
 
-};
+}
 
-// function to run at completion of quiz. Displays user score
+// function to run at completion of quiz. Displays user score and prompts user to replay
 
 function finishQuiz() {
 
@@ -141,39 +140,39 @@ function finishQuiz() {
 
     setTimeout(function () {
         document.getElementById("message").style.fontSize = "100%";
-        document.getElementById("welcome-area").innerHTML = `
-            <p id="message">Well done on completing the quiz ${username}!!</p>
-             <br> 
-             <p>You scored: ${score}/20.</p>
-             <br> 
-             <p>Click the button below if you'd like to play again</p>
-             <br>
-             <button class="button" id="refresh" onclick="refreshQuiz()">Play Again!</button>
-             `;
-        document.getElementById("welcome-area").style.margin = "10% auto";
+        document.getElementById("message-area").innerHTML = `
+        <p id="message">Well done on completing the quiz ${username}!!</p>
+         <br> 
+         <p>You scored: ${score}/20.</p>
+         <br> 
+         <p>Click the button below if you'd like to play again</p>
+         <br>
+         <button class="button" id="refresh" onclick="refreshQuiz()">Play Again!</button>
+         `;
+        document.getElementById("message-area").style.margin = "10% auto";
         document.getElementById("question-area").style.display = "none";
         document.getElementById("answer-area").style.display = "none";
-    }, 1000)
-};
+    }, 1000);
+}
 
-// Function checks answer and user progress
+// Function checks answer, user progress, and calls incrementScore for correct answers
 
 function checkAnswer(ev) {
     if (ev.target.innerHTML === randomQuestion.correct) {
         incrementScore();
-    };
+    }
     if (questionArray.length === 0) {
         finishQuiz();
     } else {
         runQuiz();
-    };
-};
+    }
+}
 
 // function increments score starting at 0
 
 function incrementScore() {
-    score++
-};
+    score++;
+}
 
 // Creates and validates username, displays quiz areas on user input
 
@@ -191,7 +190,7 @@ document.getElementById("confirm").addEventListener("click", function () {
         setTimeout(function () {
             document.getElementById("message").style.fontSize = "80%";
             document.getElementById("message").textContent = `Please read the question carefully and select the correct answer from the choices below`;
-            document.getElementById("welcome-area").style.margin = "auto";
+            document.getElementById("message-area").style.margin = "auto";
             document.getElementById("question-area").style.display = "block";
             document.getElementById("answer-area").style.display = "block";
         }, 2000);
@@ -200,8 +199,9 @@ document.getElementById("confirm").addEventListener("click", function () {
 });
 
 // Function reloads quiz on user input
-function refreshQuiz () {
-    window.location.reload()
+
+function refreshQuiz() {
+    window.location.reload();
 }
 
 // Event listeners for user answer input and refresh
