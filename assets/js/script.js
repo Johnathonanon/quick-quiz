@@ -148,7 +148,7 @@ function finishQuiz() {
              <br> 
              <p>Click the button below if you'd like to play again</p>
              <br>
-             <button class="button" id="refresh" required>Play Again!</button>
+             <button class="button" id="refresh" onclick="refreshQuiz()">Play Again!</button>
              `;
         document.getElementById("welcome-area").style.margin = "10% auto";
         document.getElementById("question-area").style.display = "none";
@@ -165,7 +165,7 @@ function checkAnswer(ev) {
     if (questionArray.length === 0) {
         finishQuiz();
     } else {
-        runQuiz()
+        runQuiz();
     };
 };
 
@@ -199,13 +199,14 @@ document.getElementById("confirm").addEventListener("click", function () {
     runQuiz();
 });
 
+// Function reloads quiz on user input
+function refreshQuiz () {
+    window.location.reload()
+}
+
 // Event listeners for user answer input and refresh
 
 document.getElementById("a1").addEventListener("click", checkAnswer);
 document.getElementById("a2").addEventListener("click", checkAnswer);
 document.getElementById("a3").addEventListener("click", checkAnswer);
 document.getElementById("a4").addEventListener("click", checkAnswer);
-
-document.getElementById("refresh").addEventListener("click", function () {
-    window.location.reload();
-});

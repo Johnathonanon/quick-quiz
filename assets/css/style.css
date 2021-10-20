@@ -12,27 +12,6 @@ h1 {
     text-align: center;
 }
 
-/*Welcome area style */
-
-#welcome-area {
-    font-size: 200%;
-    text-align: center;
-    margin: 15%;
-}
-
-#username {
-    clear: both;
-    background: transparent;
-    color: black;
-    width: 40%;
-    height: 30px;
-    margin: 20px;
-    border: 1px solid #4A556B;
-    border-radius: 2px;
-    font-family: 'Glory', sans-serif;
-    font-size: 80%;
-}
-
 /* General button style */
 
 .button {
@@ -55,6 +34,27 @@ h1 {
 #refresh {
     width: 250px;
     height: 100px;
+}
+
+/*Welcome area style */
+
+#welcome-area {
+    font-size: 200%;
+    text-align: center;
+    margin: 15%;
+}
+
+#username {
+    clear: both;
+    background: transparent;
+    color: black;
+    width: 40%;
+    height: 30px;
+    margin: 20px;
+    border: 1px solid #4A556B;
+    border-radius: 2px;
+    font-family: 'Glory', sans-serif;
+    font-size: 80%;
 }
 
 /* Question area style */
@@ -97,7 +97,7 @@ h1 {
 
 .answer-button {
     height: 100%;
-    width:100%;
+    width: 100%;
     padding: 2%;
     font-size: 120%;
     font-family: 'Glory', sans-serif;
