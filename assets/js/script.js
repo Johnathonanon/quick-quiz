@@ -118,13 +118,15 @@ function runQuiz() {
     let userQuestion = randomQuestion.question;
     let userChoices = randomQuestion.choices;
 
-    document.getElementById("question").textContent = userQuestion;
-    document.getElementById("a1").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
-    document.getElementById("a2").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
-    document.getElementById("a3").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
-    document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+    setTimeout(function () {
+        document.getElementById("question").textContent = userQuestion;
+        document.getElementById("a1").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+        document.getElementById("a2").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+        document.getElementById("a3").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
+        document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
 
-    usedQuestions.push(randomQuestion);
+        usedQuestions.push(randomQuestion);
+    }, 500)
 }
 
 /**
