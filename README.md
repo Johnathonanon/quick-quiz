@@ -63,43 +63,36 @@ The live link can be found here - https://johnathonanon.github.io/quick-quiz/
   - This section is where the four answers connected to the specific question being asked are displayed to the user. The order in which the answers appear is randomised. The answer choice appears as buttons which when clicked by the user progress the quiz. The users choice is checked against the correct answer and score variable updated accordingly. On desktop the buttons are highlighted when hovered over and on touchscreen devices they have a transfrom effect applied when tapped by the user.
 
   ![picture of answer area 1](readme-images/answersnip1.PNG)
+
   ![picture of answer area 2](readme-images/answersnip2.PNG)
 
-- ****
+- **End of quiz**
 
-  - The footer is has a copyright of the owner and the year it was published. The right hand side of the footer will contain icons that are responsive/interactive that will bring the user to Padraig Degnan's Social media outlets. These icons are removed at lower screen sizes to make the site neater for the user.
+  - Once user has completed all questions the quiz is finished and the user receives feedback. This includes a congratulations message, which utilises the previously entered username for personalisation sake, their score, and a prompt to play again if desired. Clicking the play again button reloads the page and provides the user with a freshly randomised set of questions and answers.
 
-  ![picture of footer](readme-images/foot1.PNG)
-  ![picture of footer at < 800px](readme-images/foot2.PNG)
+  ![picture of quiz end](readme-images/finishsnip.PNG)
 
 ### Features Left to Implement
 
-- As of now the contact form only brings the user to the thanks.html file. In the future this form should allow the user to send Padraig a message via email.
+- One user stated they would like more questions or possibly a different set of questions to choose.
 
-- My mentor mentioned the about section appeared "wordy", especially on mobile devices, and I agree with this assertion. Despite this, the purpose of the about section is to impart information about the site subject and so I feel it still performs its intended function and remains succinct enough as to not cause users to have a poor experience. However, it is my intention to potentially implement a "read more" button in the future so as to add to the user experience aspect of the site.
+- I had originally intended to implement a difficulty level but chose not to. This is something I would still be interested in implementing as I feel it would only add to the enjoyability of the quiz, as well as allowing for a larger question pool, as mentioned above.
+
+- I could possibly introduce a high score function which would store the users previous attempts and allow them to compete against themselves or others. 
 
 ## Testing
 
+The site has been consistently tested throughout its development by both myself and others. Any time a new HTML, CSS, or JS element was introduced it was stringently tested before it was either implemented or discarded.
 
-The site has been consistently tested throughout its development. Any time a new feature was introduced or style change made, this was tested using chrome developer tools.
+All html elements serve their intended purpose at time of submission. All styles work as intended and add to the overall user experience. The site has been stress tested on a large number of different browsers and screen sizes both using emulators on dev tools as well as physical mobile devices and tablets. Both the myself and others viewed the site on a number of personal platforms, android and ios, and found the site to work as intended on different screen sizes and browsers.
 
-All html elements serve their intended purpose at time of submission. All styles work as intended and add to the overall user experience. The site has been stringently tested on a large number of different browsers and screen sizes both using emulators on dev tools as well as physical mobile devices and tablets. Both the site subject and others viewed the site on a number of personal platforms, android and ios, and found the site to work as intended on different screen sizes and browsers.
+I had some difficulty with both the checkAnswer and runQuiz functions towards the end of my project. I tried numerous different methods and spent a reasonable amount of time troubleshooting before my mentor looked at my code and offered his advice which thankfully was the push I needed to realise and rectify my mistake, which turned out to be mercifully simple.
 
-The footer on the Contact page had white space underneath it at < 1350px. The only way with my current knowledge and given time constraints to resolve this issue was to increase the image size on the contact page in order to eliminate the white space. This solution is not ideal and I intend to resolve it but the site still functions and appears as intended.
+One user found two issues, one where he received a score of 21/20 and one where the desktop style was being applied on his android device. He states he is using the most up to date software and hardware versions and he and I are both currently unable to replicate these issues.
 
-The hamburger menu at < 600px displayed in the incorrect direction most of its implementation, however comments from the site subject as well as others who viewed the site on a mobile device led me to fix this pre-submission.
+When viewed on Microsoft Edge there are several 'issues' displayed when viewing dev tools. I brought this to the attention of my mentor as I was unable to understand the exact meaning behind them and he stated he also wasn't entirely sure on what the meant. He told me to submit as is, since the site functions as intended with no 'errors', and I would end up wasting time otherwise.
 
-![picture of bugged hamburger menu](readme-images/hamburger600px.PNG)
-
-All links, both internal and external, have been checked and confirmed working on a multitude of browsers including Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari. 
-
-Any forms and videos act as intended. 
-
-The site works as intented on all tested platforms.
-
-One of the largest challenges faced when implementing media queries for smaller device sizes was that certain elements had been given size values in pixels at the start of development. This caused an unnecessary amount of time to be spent fixing broken style through the development process, however it also resulted in a better site and a greater understanding of the priciples behind html and css.
-
-Efforts were made beginning, during, and at the end of development to optimise the site as best as possible. This included colour palette generators and contrast checkers for accessibility, the addition of alt attributes where necessary, reduction of image file sizes to help load times, and search engine optimisation.
+Efforts were made beginning, during, and at the end of development to optimise the site as best as possible. This included colour palette generators and contrast checkers for accessibility, the addition of alt attributes where necessary, and search engine optimisation.
 
 A colour palette was generated and the chosen colours ran through a contrast checker to ensure a pleasant experience and large degree of accessibility for the site. 
 
