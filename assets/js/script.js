@@ -1,5 +1,4 @@
 // Questions array
-
 const questionArray = [{
         "question": "How many days in a fortnight?",
         "choices": ["14", "7", "21", "365"],
@@ -103,21 +102,18 @@ const questionArray = [{
 ];
 
 // Array to store previously generated questions
-
 let usedQuestions = [];
 
 // User score variable
-
 let score = 0;
 
 // Declaration of random question from questionArray
-
 let randomQuestion;
 
-// Generates questions and answers and displays to page
-
+/**
+ * Generates questions and answers and displays to page
+ */
 function runQuiz() {
-
     randomQuestion = questionArray.splice(Math.floor(Math.random() * questionArray.length), 1)[0];
     let userQuestion = randomQuestion.question;
     let userChoices = randomQuestion.choices;
@@ -129,14 +125,13 @@ function runQuiz() {
     document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
 
     usedQuestions.push(randomQuestion);
-
 }
 
-// function to run at completion of quiz. Displays user score and prompts user to replay
-
+/**
+ * Runs at completion of quiz. Displays user score and prompts user to replay
+ */
 function finishQuiz() {
-
-    let username = document.getElementById("username").value;
+    const username = document.getElementById("username").value;
 
     setTimeout(function () {
         document.getElementById("message").style.fontSize = "100%";
@@ -155,8 +150,10 @@ function finishQuiz() {
     }, 1000);
 }
 
-// Function checks answer, user progress, and calls incrementScore for correct answers
-
+/**
+ * Checks answer, user progress, and calls incrementScore for correct answers
+ * @param {Event} ev Click event details when called by answer button click
+ */
 function checkAnswer(ev) {
     if (ev.target.innerHTML === randomQuestion.correct) {
         incrementScore();
@@ -168,17 +165,18 @@ function checkAnswer(ev) {
     }
 }
 
-// function increments score starting at 0
-
+/**
+ * Increments score starting at 0
+ */
 function incrementScore() {
     score++;
 }
 
-// Creates and validates username, displays quiz areas on user input
-
+/**
+ * Creates and validates username, displays quiz areas on user input - clicking confirm
+ */
 document.getElementById("confirm").addEventListener("click", function () {
-
-    let username = document.getElementById("username").value;
+    const username = document.getElementById("username").value;
 
     if (username === "") {
         alert("Please enter a valid username");
@@ -198,13 +196,14 @@ document.getElementById("confirm").addEventListener("click", function () {
     runQuiz();
 });
 
-// Function reloads quiz on user input
-
+/**
+ * Reloads quiz on user input
+ */
 function refreshQuiz() {
     window.location.reload();
 }
 
-// Event listeners for user answer input and refresh
+// Event listeners for user answer input and progression of quiz
 
 document.getElementById("a1").addEventListener("click", checkAnswer);
 document.getElementById("a2").addEventListener("click", checkAnswer);
