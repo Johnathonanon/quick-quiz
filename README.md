@@ -119,8 +119,6 @@ A lighthouse report was generated in order to check performance, accessibility, 
 
 - As mentioned above one user reported two issues which neither he nor myself were then able to replicate. I would be eager to know what caused these. 
 
-- 
-
 ## Deployment
 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -132,39 +130,12 @@ The live link can be found here - https://johnathonanon.github.io/quick-quiz/
 
 ## Credits
 
-http://padraigdeignan.simplesite.com/415329717 
+A number of questions were found here - https://www.radiotimes.com/quizzes/pub-quiz-general-knowledge/
 
-https://www.youtube.com/watch?v=xMTs8tAapnQ (I used this for the burger menu)
+refreshQuiz function inspiration from here - https://stackoverflow.com/questions/5480945/refreshing-page-on-click-of-a-button/5480965
 
-https://liber.ie/product/protestant-community-in-sligo-1914-49/
+Some inspiration was taken from Code Institute lessons and the walkthrough project love-maths, specifically the implementation of the event listener on line 181 in script.js.
 
-https://liber.ie/product/land-and-people-in-nineteenth-century-sligo/
-
-https://liber.ie/product/sligo-in-the-eighteenth-century/
-
-https://www.youtube.com/watch?v=4jrTHiWFcAE
-
-https://www.youtube.com/watch?v=O_Xj8Jrenwk
-
-https://code-institute-org.github.io/love-running-2.0/signup.html (Used this code to help with my contact page)
-
-
-
-
-
-
-### Content
-
-- All written content and photos were approved by Padraig Deignan himself. Padraig Deignan supplied the photos used on the website of himself from his personal computer harddrive.
-- The icons in the header were taken from [Font Awesome](https://fontawesome.com/)
-- The photos used for the books were taken from Pagraig Deignans Facebook [with permission and approval] (https://www.facebook.com/padraig.deignan)
-
-### Media
-
-- The photo used on contact page are from this open source (https://unsplash.com/)
-- The color pallette was generated using this source (Adobe Color - https://color.adobe.com/)
-- Contrast Checker was used to help with user experience (WebAim Contrast Checker - https://webaim.org/resources/contrastchecker/)
-- Fonts were derived from (Google Fonts - https://fonts.google.com/)
-- Videos on media section were embedded using a youtube embed link
+My mentor was very helpful and his knowledge and experience is highly appreciated. His input was especially helpful when troubleshooting the runQuiz and checkAnswer functions, on lines 116 and 160 in script.js respectively.
 
 
