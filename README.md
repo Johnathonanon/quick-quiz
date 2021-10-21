@@ -2,39 +2,21 @@
 
 ![Image](readme-images/headingsnip.PNG)
 
-Quick Quiz is a javascript based site in which the user can partake in a 20 question long multiple choice quiz in order to have some fun and test their general knowledge. The questions are randomly generated and answer randomly assigned to one of four possible buttons to enhance the user experience
+Quick Quiz is a javascript centric site in which the user can partake in a 20 question long multiple choice quiz in order to have some fun and test their general knowledge. The questions are randomly generated and answers randomly assigned to one of four possible buttons to enhance the user experience. The questions are a mix of relative difficulty levels and subjects so as to appeal to a broad range of people, and hopefully entice them to broaden their knowledge while also catering to the interests they may already have. The site is simple and modern, and allows the user to quickly and seemlessly work their way through the questions without becoming bored or bogged down. There is no time limit on the user answering a particular question. This allows them to search the answer before continuing on if they wish. Conversely they can finish the entire quiz before receiving their ultimate score, at which point they are prompted to try again if so desired. This functionality enables the user to then potentially carry out some research into questions they may be unsure of, or challenge themselves by building on their previous attempt by choosing a different answer to question they may be unsure of.
 
-I decided to base this site on Padraig Deignan because of the impact he had on me as a teacher and mentor. I first met him over ten years ago when he was my tutor/mentor for History, English and Geography, just after he had published his first book. He ended up having an everlasting impact on my life as someone whom I have looked up to. In the intervening years we have kept in contact and I have followed his career and subsequent publications. I approached him to base this site on him because I had noticed that despite him being well known in the local area, and very highly respected by a large amount of people both personally and professionaly, his online presence was, unfortnately, lacking. I felt this site would hopefully be a benefit to him, and allow a greater audience to learn about and possibly purchase his works. As well as providing a way to contact him and links to his social media.
+The live link can be found here - https://johnathonanon.github.io/quick-quiz/
 
-This site provides a platform for people, both nationally and internationally, who are interested in Irish History, wish to possibly connect with Padraig Deignan, wish to purchase one of his books, or possibly wish to collaborate with him. It amalgamates information from several different sources and provides links to these so users can read about the man himself, find out a little bit about his books, and get in contact if they wish.
-
-The live link can be found here - https://johnathonanon.github.io/padraig-deignan/index.html
-
-![Image](readme-images/amiresponsivesnip.png)
+![Image](readme-images/amiresponsivesnip.PNG) 
 
 ## Features
 
 ### Existing Features
 
-- **Navigation Bar**
+- **Heading**
 
-  - Featured on all five pages, the full responsive navigation bar includes links to the 
-
-    Home | About | Books | Media | Contact
-
-    and is identical in each page to allow for easy navigation.
-
-  - This will allow users to navigate between the pages on the website without needing to use the "back" button for a more user friendly experience.
-
-  - The current page appears with a line underneath, allowing the user to quickly and easily understand what page they are currently viewing.
-
-  ![picture of navbar](readme-images/navbarsnip.PNG)
-
-  - The nav bar is coded to center above the social media icons at < 800px and become a hamburger icon with a dropdown menu at < 600px screen width, which again makes for a friendlier user experience.
-
-  ![picture of navbar at < 800px](readme-images/navbar800px.PNG)
-
-  ![picture of navbar at < 600px](readme-images/hamburger600px2.PNG)
+  - Heading remains static as the site progresses. It is the title of the site and as such is front and centre at all times. It is stylish but minimalist so as to not overwhelm the user but rather provide a constant point throughout the progression of the quiz.
+<br>
+  ![Image](readme-images/headingsnip.PNG)
 
 - **Social Media Icons**
 

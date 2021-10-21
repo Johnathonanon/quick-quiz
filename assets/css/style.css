@@ -104,6 +104,7 @@ h1 {
     border: 4px outset #ABC4F7;
 }
 
+/* Media queries */
 
 @media(hover: hover) {
     .answer-button:hover {
