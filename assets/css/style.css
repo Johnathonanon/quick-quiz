@@ -103,3 +103,13 @@ h1 {
     font-family: 'Glory', sans-serif;
     border: 4px outset #ABC4F7;
 }
+
+
+@media(hover: hover) {
+    .answer-button:active {
+        transform: scale(1.1);
+        transition: .1s;
+    }
+}
+
+@media (hover: none) {}
