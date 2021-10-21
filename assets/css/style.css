@@ -106,10 +106,14 @@ h1 {
 
 
 @media(hover: hover) {
+    .answer-button:hover {
+        background-color: #ABC4F7;
+    }
+}
+
+@media (hover: none) {
     .answer-button:active {
         transform: scale(1.1);
         transition: .1s;
     }
 }
-
-@media (hover: none) {}
