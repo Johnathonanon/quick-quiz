@@ -84,13 +84,20 @@ The live link can be found here - https://johnathonanon.github.io/quick-quiz/
 
 The site has been consistently tested throughout its development by both myself and others. Any time a new HTML, CSS, or JS element was introduced it was stringently tested before it was either implemented or discarded.
 
-All html elements serve their intended purpose at time of submission. All styles work as intended and add to the overall user experience. The site has been stress tested on a large number of different browsers and screen sizes both using emulators on dev tools as well as physical mobile devices and tablets. Both the myself and others viewed the site on a number of personal platforms, android and ios, and found the site to work as intended on different screen sizes and browsers.
+All html elements serve their intended purpose at time of submission. All styles work as intended and add to the overall user experience. The site has been stress tested on a large number of different browsers and screen sizes both using emulators on dev tools as well as physical mobile devices and tablets. Both myself and others viewed the site on a number of personal platforms, android and ios, and found the site to work as intended on different screen sizes and browsers.
 
-I had some difficulty with both the checkAnswer and runQuiz functions towards the end of my project. I tried numerous different methods and spent a reasonable amount of time troubleshooting before my mentor looked at my code and offered his advice which thankfully was the push I needed to realise and rectify my mistake, which turned out to be mercifully simple.
+I had some difficulty with both the checkAnswer and runQuiz functions towards the end of my project. I tried numerous different methods and spent a reasonable amount of time troubleshooting before my mentor looked at my code and offered his advice which thankfully was the push I needed to realise and rectify my mistake, which turned out to be mercifully simple. I had mistakenly written code in runQuiz which should have been in checkAnswer, and was calling checkAnswer in runQuiz instead of the other way around. Making these adjustments resulted in the code running as intended.
 
-One user found two issues, one where he received a score of 21/20 and one where the desktop style was being applied on his android device. He states he is using the most up to date software and hardware versions and he and I are both currently unable to replicate these issues.
+One user found two issues, one where he received a score of 21/20 and one where the desktop style was being applied on his android device. He states he is using the most up to date software and hardware versions and he and I are both currently unable to replicate the first issue. Below is a snip of the second, and a snip of the relevant media query on caniuse.com. He states he tried clearing cache and restarting the browser and neither had any effect, so the issue is still outstanding. 
 
-When viewed on Microsoft Edge there are several 'issues' displayed when viewing dev tools. I brought this to the attention of my mentor as I was unable to understand the exact meaning behind them and he stated he also wasn't entirely sure on what the meant. He told me to submit as is, since the site functions as intended with no 'errors', and I would end up wasting time otherwise.
+![picture of style issue](readme-images/userscreenshot1.PNG)
+
+![picture of caniuse.com snip](readme-images/caniusesnip.PNG)
+
+
+When viewed on Microsoft Edge there are several 'issues' displayed when viewing dev tools. I brought this to the attention of my mentor as I was unable to understand the exact meaning behind them and he stated he also wasn't entirely sure on what they meant. He told me to submit as is, since the site functions as intended with no 'errors', and I would end up wasting time otherwise.
+
+![picture of Microsoft Edge issues](readme-images/issuessnip.PNG)
 
 Efforts were made beginning, during, and at the end of development to optimise the site as best as possible. This included colour palette generators and contrast checkers for accessibility, the addition of alt attributes where necessary, and search engine optimisation.
 
