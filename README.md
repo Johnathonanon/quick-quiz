@@ -1,12 +1,12 @@
 # Quick Quiz
 
-![Image](readme-images/headingsnip.PNG)
+![Picture of main heading](readme-images/headingsnip.PNG)
 
 Quick Quiz is a javascript centric site in which the user can partake in a 20 question long multiple choice quiz in order to have some fun and test their general knowledge. The questions are randomly generated and answers randomly assigned to one of four possible buttons to enhance the user experience. The questions are a mix of relative difficulty levels and subjects so as to appeal to a broad range of people, and hopefully entice them to broaden their knowledge while also catering to the interests they may already have. The site is simple and modern, and allows the user to quickly and seemlessly work their way through the questions without becoming bored or bogged down. There is no time limit on the user answering a particular question. This allows them to search the answer before continuing on if they wish. Conversely they can finish the entire quiz before receiving their ultimate score, at which point they are prompted to try again if so desired. This functionality enables the user to then potentially carry out some research into questions they may be unsure of, or challenge themselves by building on their previous attempt by choosing a different answer to question they may be unsure of.
 
 The live link can be found here - https://johnathonanon.github.io/quick-quiz/
 
-![Image](readme-images/amiresponsivesnip.PNG) 
+![Picture of AmIResponsive snip](readme-images/amiresponsivesnip.PNG) 
 
 ## Features
 
@@ -15,50 +15,57 @@ The live link can be found here - https://johnathonanon.github.io/quick-quiz/
 - **Heading**
 
   - Heading remains static as the site progresses. It is the title of the site and as such is front and centre at all times. It is stylish but minimalist so as to not overwhelm the user but rather provide a constant point throughout the progression of the quiz.
-<br>
-  ![Image](readme-images/headingsnip.PNG)
 
-- **Social Media Icons**
+  ![Picture of main heading](readme-images/headingsnip.PNG)
 
-  - Responsive social media icons for the purpose of the user to connect with the Author/Historian in order to get in touch, or learn more about Padraig Deignan. These contain links to the home pages of the included sites for those social media sites Padraig is not currently a member of. All sites open in a new tab. At < 600px these center under the navbar for a neater user experience. The icons change colour when hovered on.
+- **Welcome area**
 
-- **The Index Page**
+  - First thing visible to user on visiting site 
 
-  - This introduces the user to what the website is about. This is a simple visual representation that the website is about Padraig Deignan and who he is (Author and Historian). A books section has a visual representation of his work, and clicking on the images redirects to the books.html section of the relevant title.
+  ![Picture of welcome area](readme-images/welcomesnip.PNG)
 
-  ![picture of hero image and description](readme-images/herosnip.PNG)
+- **Welcome statement**
 
-- **About**
+  - A short statement welcoming the user to the site and prompting them to input a username
 
-  - The about section will allow the user to read a short section about the background of Padraig Deignan, and how he became who is today. This section will allow the user to get a more in-depth perception of who Padraig Deignan is as an Author/Historian. It will allow the user to develop a connection with the subject of the site.
+  ![Picture of welcome message 1](readme-images/welcomemessagesnip1.PNG)
 
-  ![picture of about section](readme-images/aboutsnip.PNG)
+- **Username input**
 
-- **Books**
+  - Text input box allowing the user to enter a username which is stored as a variable and used throughout the quiz. Adds a personal element to the quiz.
 
-  - This section will allow the user to purchase books via included links and also view the books Padraig Deignan has written. They will have brief sections on each book describing the contents.
+  ![Image](readme-images/inputsnip.PNG)
 
-  ![picture of main books section](readme-images/booksnip1.PNG)
+- **Confirm button**
 
-  ![picture of books purchase section](readme-images/booksnip2.PNG)
+  - When clicked displays a second welcome message containing entered username to the user and runs the main quiz. If user attempts to progess without entering a username they receive an alert stating the must do so to continue.
 
-- **Media**
+  ![Image](readme-images/confirmsnip.PNG)
 
-  - In this section the user can view videos featuring Padraig Deignan.
+  ![Image](readme-images/alertsnip.PNG)
 
-  ![picture of media section](readme-images/mediasnip.PNG)
+  ![Image](readme-images/welcomemessagesnip2.PNG)
 
-- **Contact**
+- **Instructions**
 
-  - This section contains a form which will allow the user to contact Padraig by email. All fields are required, meaning the from has to filled correctly in order to be submitted. Once all fields are entered and submit button is pressed the user is redirected to the thanks page.
+  - Brief statement on how quiz works 
 
-  ![picture of contact form](readme-images/formname.PNG)
-  ![picture of contact form](readme-images/formemail1.PNG)
-  ![picture of contact form](readme-images/formemail2.PNG)
-  ![picture of contact form](readme-images/formmessage.PNG)
-  ![picture of thanks message](readme-images/thanksmessage.PNG)
+  ![Image](readme-images/instructionssnip.PNG)
 
-- **Footer**
+- **Question area**
+
+  - This section is where the randomly generated question is displayed to the user. It is displayed in large text and bordered top and bottom so as to stand out. 
+
+  ![picture of question area](readme-images/questionsnip.PNG)
+
+- **Answer area**
+
+  - This section is where the four answers connected to the specific question being asked are displayed to the user. The order in which the answers appear is randomised. The answer choice appears as buttons which when clicked by the user progress the quiz. The users choice is checked against the correct answer and score variable updated accordingly. On desktop the buttons are highlighted when hovered over and on touchscreen devices they have a transfrom effect applied when tapped by the user.
+
+  ![picture of answer area 1](readme-images/answersnip1.PNG)
+  ![picture of answer area 2](readme-images/answersnip2.PNG)
+
+- ****
 
   - The footer is has a copyright of the owner and the year it was published. The right hand side of the footer will contain icons that are responsive/interactive that will bring the user to Padraig Degnan's Social media outlets. These icons are removed at lower screen sizes to make the site neater for the user.
 

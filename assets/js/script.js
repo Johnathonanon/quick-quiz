@@ -156,6 +156,7 @@ function finishQuiz() {
  * Checks answer, user progress, and calls incrementScore for correct answers
  * @param {Event} ev Click event details when called by answer button click
  */
+// Input given by mentor on this function
 function checkAnswer(ev) {
     if (ev.target.innerHTML === randomQuestion.correct) {
         incrementScore();
@@ -179,7 +180,7 @@ function incrementScore() {
  */
 document.getElementById("confirm").addEventListener("click", function () {
     const username = document.getElementById("username").value;
-
+    // function not working correctly, fixed after mentor input
     if (username === "") {
         alert("Please enter a valid username");
     } else {
