@@ -34,23 +34,23 @@ The live link can be found here - https://johnathonanon.github.io/quick-quiz/
 
   - Text input box allowing the user to enter a username which is stored as a variable and used throughout the quiz. Adds a personal element to the quiz.
 
-  ![Image](readme-images/inputsnip.PNG)
+  ![Picture of username input text box](readme-images/inputsnip.PNG)
 
 - **Confirm button**
 
   - When clicked displays a second welcome message containing entered username to the user and runs the main quiz. If user attempts to progess without entering a username they receive an alert stating the must do so to continue.
 
-  ![Image](readme-images/confirmsnip.PNG)
+  ![Picture of confirm button](readme-images/confirmsnip.PNG)
 
-  ![Image](readme-images/alertsnip.PNG)
+  ![Picture of username alert](readme-images/alertsnip.PNG)
 
-  ![Image](readme-images/welcomemessagesnip2.PNG)
+  ![Picture of welcome message 2](readme-images/welcomemessagesnip2.PNG)
 
 - **Instructions**
 
   - Brief statement on how quiz works 
 
-  ![Image](readme-images/instructionssnip.PNG)
+  ![Picture of instructions section](readme-images/instructionssnip.PNG)
 
 - **Question area**
 
@@ -96,24 +96,30 @@ Efforts were made beginning, during, and at the end of development to optimise t
 
 A colour palette was generated and the chosen colours ran through a contrast checker to ensure a pleasant experience and large degree of accessibility for the site. 
 
-![picture of colour palette](readme-images/colourwheel.PNG)
-![picture of contrast checker](readme-images/contrast.PNG)
-![another picture of contrast checker](readme-images/contrast2.PNG)
+A lighthouse report was generated in order to check performance, accessibility, etc.
 
-The site subject - Padraig Deignan - was kept informed of all design and content choices as they were made as well as contributing much of both. He was sent screenshots and videos of the site in order to provide feedback on site functions and navigation elements. During the development process he requested several amendments which were immediately implemented and reapproved by him.
+![picture of colour palette 1](readme-images/palettesnip1.PNG)
+
+![picture of colour palette 2](readme-images/palettesnip2.PNG)
+
+![another picture of contrast checker](readme-images/contrastsnip.PNG)
 
 ![picture of dev tools lighthouse snip](readme-images/lighthousesnip.PNG)
 
 ### Validator Testing
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+- JS
+  - No errors were returned when passing through a JavaScript linter [JSHint](https://jshint.com/)
 
 ### Unfixed Bugs
 
-- As mentioned above the contact page displayed white space underneath the footer at < 1350px and I "fixed" this by increasing the height of the background image. I am aware that this is not ideal but given time constraints I was concerned that my attempts to rectify this may cause the page to break at other screen sizes and compound the issue, resulting in me getting bogged down in troublshooting and wasting time. The site still functions as intended and this page still adheres to the intented style and user experience.
+- As mentioned above one user reported two issues which neither he nor myself were then able to replicate. I would be eager to know what caused these. 
+
+- 
 
 ## Deployment
 
@@ -122,7 +128,7 @@ The site subject - Padraig Deignan - was kept informed of all design and content
   - From the source section drop-down menu, select the Main Branch
   - Once the Main Branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found here - https://johnathonanon.github.io/padraig-deignan/about.html
+The live link can be found here - https://johnathonanon.github.io/quick-quiz/
 
 ## Credits
 

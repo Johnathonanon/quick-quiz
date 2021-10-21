@@ -126,7 +126,7 @@ function runQuiz() {
         document.getElementById("a4").textContent = userChoices.splice(Math.floor(Math.random() * userChoices.length), 1);
 
         usedQuestions.push(randomQuestion);
-    }, 500)
+    }, 500);
 }
 
 /**
