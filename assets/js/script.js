@@ -204,7 +204,6 @@ function refreshQuiz() {
 }
 
 // Event listeners for user answer input and progression of quiz
-
 document.getElementById("a1").addEventListener("click", checkAnswer);
 document.getElementById("a2").addEventListener("click", checkAnswer);
 document.getElementById("a3").addEventListener("click", checkAnswer);

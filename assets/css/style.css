@@ -103,7 +103,3 @@ h1 {
     font-family: 'Glory', sans-serif;
     border: 4px outset #ABC4F7;
 }
-
-.answer-button:hover {
-    background-color: #ABC4F7;
-}
